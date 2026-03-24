@@ -5,7 +5,7 @@ import { asyncHandler } from '../middlewares/errorHandler.js';
 // Helper: Generate JWT token
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
-    expiresIn: process.env.JWT_EXPIRY,
+    expiresIn: "7d",
   });
 };
 
